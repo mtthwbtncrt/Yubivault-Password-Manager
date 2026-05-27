@@ -1,0 +1,56 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# IDE / editor noise
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ====================================================================
+# NEVER commit any real vault or related artifacts.
+# These are the only files that contain (encrypted) secrets, but also
+# leak metadata (slot counts, KDF params, timestamps, sha256 history).
+# ====================================================================
+vault.json
+*.vault.json
+*.audit.log
+.yubivault/
+
+# Anything that smells like an export from another password manager
+passwords.csv
+*-passwords.csv
+*_passwords.csv
+vault-export.*
+chrome*.csv
+bitwarden*.csv
+keepass*.csv
+lastpass*.csv
+1password*.csv
+
+# Recovery codes the user may have pasted into a file by accident.
+# (You shouldn't be writing these to disk anywhere — but just in case.)
+recovery-codes.txt
+recovery.txt
+codes.txt
+
+# Environment / secrets files
+.env
+.env.*
+*.pem
+*.key
+*.p12
+
